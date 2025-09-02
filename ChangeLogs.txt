@@ -1,0 +1,54 @@
+Razor Bot - Changelog
+=====================
+
+Version: v2.0.2
+Release Date: [30-08-2025]
+
+Changes from v2.0.1:
+-------------------------
+
+✨ New Features:
+- [Added] Invite tracking system.
+- [Added] Kickall command now has a **safety confirmation**:
+    - First click a button to confirm.
+    - Then type `YesIwantToKickEveryone` in chat before it runs.
+- [Added] Kickall now shows a **summary** (kicked, failed, not kickable).
+
+🛠️ Improvements:
+- [Improved] The welcome system now supports more Embed Options
+- [Improved] Major Improvements in license system checks! You can now manage your license at https://license.razorbot.buzz/ !
+- [Improved] Following Commands are switched to image based now!
+    Canvas Based Commands
+        /bot ping
+        /bot invite
+        /leaderboard
+        /invite leaderboard
+        /userinfo
+        /invite count
+- [Improved] Ticket System: Fixed reply issues and made buttons/menus more reliable.
+- [Improved] Timeout Command: Replies are now always **ephemeral** (only visible to you).
+- [Improved] Kickall Command: Runs in **smaller batches** to avoid errors or hitting limits.
+- [Improved] Twitch Alerts: Reuses login token and adds retry to avoid spam or failures.
+- [Improved] YouTube Alerts: Remembers the last video sent, so no duplicate notifications.
+- [Improved] Command Handler: The ClientID will be fetched directly from Token.
+
+
+🐛 Bug Fixes:
+- [Fixed] Fixed Model.findOne() no longer accepted and added some checks in warn command (warn.js).
+- [Fixed] message.edit is not a function error in verification, welcome, audit logging systems.
+- [Fixed] The bot was not pinging the ticket opener and the handler role.
+- [Fixed] Ticket system no longer spams **"already acknowledged"** errors.
+- [Fixed] Timeout command no longer breaks when replying after a defer.
+- [Fixed] Kickall command no longer times out when kicking many members.
+- [Fixed] Twitch alerts no longer send duplicate messages.
+- [Fixed] YouTube alerts no longer spam old videos.
+
+🗑️ Removed Features:
+- N/A
+
+📦 Misc:
+- Better handling of API rate-limits (Twitch/ModerationCommands).
+- Clearer error messages when permissions or DMs fail.
+
+-------------------------
+Previous Version: v2.0.1
